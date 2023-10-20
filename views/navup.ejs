@@ -1,0 +1,33 @@
+<nav id="navupbox">
+  <div id="leftdiv">
+    <img src="images/mmlogo.png" alt="" />
+  </div>
+  <div id="burger">
+    <div id="num1"></div>
+    <div id="num2"></div>
+    <div id="num3"></div>
+  </div>
+</nav>
+<div id="navmenu">
+  <a href="/" id="home">HOME</a>
+  <a href="/connect" id="connect">CONNECT</a>
+  <a href="/services" id="services">SERVICES</a>
+  <a href="/work" id="work">WORK</a>
+  <a href="/about" id="about">ABOUT</a>
+</div>
+<script>
+  let burger = document.getElementById("burger");
+  let navmenu = document.getElementById("navmenu");
+  let flagabout = true;
+  burger.addEventListener("click", () => {
+    if (flagabout == true) {
+      navmenu.style.cssText =
+        "clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);";
+      flagabout = false;
+    } else if (flagabout == false) {
+      navmenu.style.cssText =
+        "clip-path: polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%);";
+      flagabout = true;
+    }
+  });
+</script>

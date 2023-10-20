@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <title>MOHAMMAD MONIR PORTFOLIO</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&family=Old+Standard+TT&family=Poppins:wght@200;300;400;500;600;700&family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="png" href="/images/mmlogo.png" />
+  </head>
+  <body>
+    <div class="welcomescreen" id="welcome">
+      <div class="insideborder">
+        <div class="text">
+          <h2 id="welcomet">Welcome</h2>
+          <h4 id="journey">Have a good Journey</h4>
+        </div>
+        <div class="enterbutton">
+          <button class="btn-37" id="enter">
+            <span class="new">Here</span>
+            <div class="old">
+              <span>Enter</span>
+              <span aria-hidden>Enter</span>
+            </div>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      let enter = document.getElementById("enter");
+
+      enter.addEventListener("click", () => {
+        window.location.href = "/home";
+      });
+
+      window.addEventListener("DOMContentLoaded", () => {
+        setTimeout(() => {
+          document.getElementById("journey").style.display = "flex";
+          document.getElementById("enter").style.display = "flex";
+          document
+            .getElementById("journey")
+            .classList.add("tracking-in-expand");
+          document.getElementById("enter").classList.add("bounce-in-top");
+          document.getElementById("welcomet").style.display = "flex";
+          document.getElementById("welcomet").classList.add("animate-charcter");
+        }, 500);
+        setTimeout(() => {
+          document
+            .getElementById("welcomet")
+            .classList.remove("animate-charcter");
+        }, 3500);
+      });
+      if (window.innerWidth < 950) {
+        document.getElementById("journey").innerHTML =
+          "For better performace use pc only";
+      }
+    </script>
+  </body>
+</html>

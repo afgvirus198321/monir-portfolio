@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <title>MOHAMMAD MONIR PORTFOLIO</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&family=Old+Standard+TT&family=Poppins:wght@200;300;400;500;600;700&family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&family=Old+Standard+TT&family=Playfair+Display+SC:ital@1&family=Poppins:wght@200;300;400;500;600;700&family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&family=Montserrat+Alternates:ital@1&family=Old+Standard+TT&family=Playfair+Display+SC:ital@1&family=Poppins:wght@200;300;400;500;600;700&family=Roboto&family=Young+Serif&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Chakra+Petch&family=Merriweather:wght@300&family=Montserrat+Alternates:ital@1&family=Old+Standard+TT&family=Playfair+Display+SC:ital@1&family=Poppins:wght@200;300;400;500;600;700&family=Roboto&family=Young+Serif&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="png" href="/images/mmlogo.png" />
+    <style>
+      body {
+        background: url(images/bg.png);
+      }
+      .services {
+        background-color: rgb(247, 247, 125);
+      }
+      .work,
+      .connect,
+      .about,
+      .navlogo {
+        background-color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <%-include('navup')%>
+    <main class="mainservices" id="aboutmainservices">
+      <div class="top" id="top">
+        <div class="ricons" id="1ri"><span>security</span></div>
+        <div class="ricons" id="2ri"><span>design</span></div>
+        <div class="ricons" id="3ri"><span>development</span></div>
+        <div class="ricons" id="4ri"><span>frontend</span></div>
+        <div class="ricons" id="5ri"><span>backend</span></div>
+        <div class="ricons" id="6ri"><span>database</span></div>
+        <div class="ricons" id="7ri"><span>maintenace</span></div>
+      </div>
+      <div class="bottom" id="bottom">
+        <span id="writeany"
+          ><h1>Why me !</h1>
+          <br />
+          <p>
+            I offer comprehensive web development services to create your
+            website. With expertise in sercurity,i ensure your site and data are
+            protected . The design aspect focuses on creating visually appealing
+            layouts.I handle both frontend and backend development to make your
+            website fully functional. I also work with databases for efficient
+            data storage and retrieval .Additionally, I provide ongoing
+            maintenance to ensure our website's optimum performance and
+            security.
+          </p></span
+        >
+      </div>
+    </main>
+    <%-include('nav')%>
+    <script>
+      let ricons = document.getElementsByClassName("ricons");
+      let write = document.getElementById("writeany");
+
+      for (let i = 0; i < ricons.length; i++) {
+        if (window.innerWidth > 951) {
+          ricons[i].addEventListener("mouseenter", () => {
+            ricons[i].style.cssText =
+              "transform: scale(140%) translateY(40px);";
+            ricons[i - 1].style.cssText =
+              "transform: scale(110%) translateY(25px);";
+            ricons[i + 1].style.cssText =
+              "transform: scale(110%) translateY(25px);";
+            ricons[i - 2].style.cssText =
+              "transform: scale(105%) translateY(10px);";
+            ricons[i + 2].style.cssText =
+              "transform: scale(105%) translateY(10px);";
+          });
+        }
+
+        ricons[i].addEventListener("mouseleave", () => {
+          ricons[i].style.cssText = "transform:scale(100%) translateY(0px);";
+          ricons[i - 1].style.cssText =
+            "transform:scale(100%) translateY(0px);";
+          ricons[i + 1].style.cssText =
+            "transform:scale(100%) translateY(0px);";
+          ricons[i - 2].style.cssText =
+            "transform:scale(100%) translateY(0px);";
+          ricons[i + 2].style.cssText =
+            "transform:scale(100%) translateY(0px);";
+        });
+        ricons[i].addEventListener("mouseenter", () => {
+          switch (i) {
+            case 0:
+              write.innerHTML =
+                "<h1>Security</h1></br><p>Security in web development refers to protecting websites and applications from unauthorized access, data breaches, and other cyber threats. It involves implementing measures such as secure authentication, encryption, firewall protection, and regular vulnerability assessments to ensure the safety of the system and users' data.</p>";
+              break;
+            case 1:
+              write.innerHTML =
+                "<h1>Design</h1></br><p>Web design focuses on the visual and interactive aspects of a website or application. It involves creating visually appealing layouts, choosing appropriate color schemes, typography, and graphics, and ensuring a seamless user experience. Designers utilize tools like Adobe Photoshop, Sketch, or Figma to create mockups and wireframes before implementing designs using HTML, CSS, and JavaScript.</p>";
+              break;
+            case 2:
+              write.innerHTML =
+                "<h1>Development</h1></br><p>Web development encompasses the entire process of building and maintaining websites or web applications. It involves writing code to create functionalities, integrating APIs (Application Programming Interfaces), and ensuring proper functionality across different browsers and devices. Web developers primarily work with programming languages such as HTML, CSS, JavaScript, and various frameworks like React, Angular, or Django.</p>";
+              break;
+            case 3:
+              write.innerHTML =
+                "<h1>Frontend</h1></br><p>Frontend development primarily deals with the client-side of web development, focusing on the user interface and user experience. It involves writing code using HTML, CSS, and JavaScript to create the visible components and interactions that users see and interact with directly in their browsers.</p>";
+              break;
+            case 4:
+              write.innerHTML =
+                "<h1>Backend</h1></br><p>Backend development focuses on the server-side of web development. It involves designing and building the server-side logic and databases that support the frontend components. Backend developers work with programming languages like Python, Ruby, PHP, or Node.js, and frameworks such as Express or Django to handle data storage, retrieval, and processing.</p>";
+              break;
+            case 5:
+              write.innerHTML =
+                "<h1>Database</h1></br><p>Databases store, organize, and manage large amounts of data for web applications. They allow efficient data retrieval and manipulation. Common types of databases used in web development include Relational Database Management Systems (e.g., MySQL, PostgreSQL) and NoSQL databases (e.g., MongoDB, Firebase).</p>";
+              break;
+            case 6:
+              write.innerHTML =
+                "<h1>Maintenance</h1></br><p>Maintenance involves regularly updating and managing websites or web applications to ensure their smooth operation. It includes tasks like fixing bugs, applying security patches, updating content, optimizing performance, and monitoring server uptime. Maintenance is crucial for keeping the site/application secure, up-to-date, and user-friendly.</p>";
+              break;
+          }
+        });
+        ricons[i].addEventListener("mouseleave", () => {
+          write.innerHTML = `<h1>Why me !</h1>
+          <br />
+          <p>
+            I offer comprehensive web development services to create your
+            website. With expertise in sercurity,i ensure your site and data are
+            protected . The design aspect focuses on creating visually appealing
+            layouts.I handle both frontend and backend development to make your
+            website fully functional. I also work with databases for efficient
+            data storage and retrieval .Additionally, I provide ongoing
+            maintenance to ensure our website's optimum performance and
+            security.
+          </p>`;
+        });
+      }
+      window.addEventListener("DOMContentLoaded", () => {
+        setTimeout(() => {
+          document.getElementById("bottom").style.cssText =
+            "transform:scale(100%)";
+          document.getElementById("top").style.cssText =
+            "transform:translateX(0%)";
+          for (let i of ricons) {
+            i.style.cssText = "transform:rotate(1080deg);";
+          }
+        }, 1000);
+      });
+    </script>
+  </body>
+</html>

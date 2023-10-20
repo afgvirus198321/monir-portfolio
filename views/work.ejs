@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <title>MOHAMMAD MONIR PORTFOLIO</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&family=Old+Standard+TT&family=Poppins:wght@200;300;400;500;600;700&family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&family=Old+Standard+TT&family=Playfair+Display+SC:ital@1&family=Poppins:wght@200;300;400;500;600;700&family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="png" href="/images/mmlogo.png" />
+    <style>
+      #work {
+        background-color: yellow;
+      }
+      .work {
+        background-color: rgb(247, 247, 125);
+      }
+      .services,
+      .connect,
+      .about,
+      .navlogo {
+        background-color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <%-include('navup')%>
+    <main class="mainwork">
+      <div class="screen" id="screen">
+        <p id="p1" class="para">Sometimes in life ,</p>
+        <p id="p2" class="para">
+          you have to change the beat,Rewrite the melody, and dance to your own
+          tune,
+        </p>
+        <p id="p3" class="para">Embrace your uniqueness and create a</p>
+        <p id="p4" class="para">Masterpiece...</p>
+        <h3 id="click">click above image to visit</h3>
+        <img src="images/1.jpg" alt="" class="firstweb" />
+        <img src="images/2.jpg" alt="" class="firstweb" />
+        <img src="images/3.jpg" alt="" class="firstweb" />
+      </div>
+      <div class="changer">
+        <div class="arrow">
+          <img src="images/arrowleft.png" alt="" id="leftarrow" />
+        </div>
+        <a href="#" id="previous"><<</a>
+        <a href="#" id="next"><span>>></span></a>
+        <div class="arrow">
+          <img src="images/arrowright.png" alt="" id="rightarrow" />
+        </div>
+      </div>
+    </main>
+    <%-include('nav')%>
+
+    <script>
+      let next = document.getElementById("next");
+      let previous = document.getElementById("previous");
+      let para = document.getElementsByClassName("para");
+      let firstweb = document.getElementsByClassName("firstweb");
+      document.addEventListener("DOMContentLoaded", () => {
+        setTimeout(() => {
+          for (let i of para) {
+            i.style.cssText = "transform:translateY(0vh)";
+          }
+        }, 300);
+      });
+      if (window.innerWidth < 959) {
+      }
+      (function () {
+        let counter = 0;
+        next.addEventListener("click", () => {
+          if (counter == 0) {
+            for (let i of para) {
+              i.style.cssText = "opacity:0%";
+            }
+          }
+          if (window.innerWidth < 1200) {
+            document.getElementById("click").style.display = "flex";
+          }
+          if (window.innerWidth < 950) {
+            if (count < 2) {
+              document.getElementById("screen").style.background =
+                "url(/images/svgbg.png)";
+              count += 1;
+              firstweb[count].style.width = "90%";
+              firstweb[count].style.height = "auto";
+              firstweb[count - 1].style.width = "0%";
+              firstweb[count - 1].style.height = "0vh";
+            } else {
+              console.log("not more");
+            }
+          } else {
+            if (count < 2) {
+              count += 1;
+              firstweb[count].style.width = "65%";
+              firstweb[count].style.height = "60vh";
+              console.log(count);
+            } else {
+              console.log("not more");
+            }
+          }
+
+          if (count >= 2) {
+            next.style.cssText = "color:lightgrey;";
+          }
+          if (count >= 1) {
+            previous.style.cssText = "color:black;";
+          }
+          console.log(count);
+        });
+
+        previous.addEventListener("click", () => {
+          if (window.innerWidth < 950) {
+            if (count > 0) {
+              firstweb[count].style.width = "0%";
+              firstweb[count].style.height = "0vh";
+              count -= 1;
+              firstweb[count].style.width = "90%";
+              firstweb[count].style.height = "auto";
+            }
+          } else {
+            if (count > 0) {
+              firstweb[count].style.width = "0%";
+              firstweb[count].style.height = "0vh";
+              count -= 1;
+              firstweb[count].style.width = "65%";
+              firstweb[count].style.height = "60vh";
+              console.log(count);
+            } else {
+              console.log("not less");
+            }
+          }
+          if (count < 2) {
+            next.style.cssText = "color:black;";
+          }
+          if (count < 1) {
+            previous.style.cssText = "color:lightgrey;";
+          }
+        });
+      })();
+      firstweb[0].addEventListener("click", () => {
+        window.location.href =
+          "https://sisters4sistersdevelopments.org/our-team";
+      });
+      firstweb[1].addEventListener("click", () => {
+        window.location.href = "https://makaan-af-hf4o.onrender.com/";
+      });
+      firstweb[2].addEventListener("click", () => {
+        window.location.href = "https://jobs.af/";
+      });
+
+      let count = -1;
+      window.addEventListener("keydown", (e) => {
+        if (e.key == "ArrowRight" || e.key == "ArrowUp") {
+          if (count == -1) {
+            for (let i of para) {
+              i.style.cssText = "opacity:0%";
+            }
+          }
+          if (count < 2) {
+            count += 1;
+            firstweb[count].style.width = "65%";
+            firstweb[count].style.height = "60vh";
+            console.log(count);
+          } else {
+            console.log("not more");
+          }
+          if (count >= 2) {
+            next.style.cssText = "color:lightgrey;";
+          }
+          if (count >= 1) {
+            previous.style.cssText = "color:black;";
+          }
+        }
+        if (e.key == "ArrowLeft" || e.key == "ArrowDown") {
+          if (count > 0) {
+            firstweb[count].style.width = "0%";
+            firstweb[count].style.height = "0vh";
+            count -= 1;
+            firstweb[count].style.width = "65%";
+            firstweb[count].style.height = "60vh";
+            console.log(count);
+          } else {
+            console.log("not less");
+          }
+          if (count < 2) {
+            next.style.cssText = "color:black;";
+          }
+          if (count < 1) {
+            previous.style.cssText = "color:lightgrey;";
+          }
+        }
+      });
+
+      setInterval(() => {
+        document
+          .getElementById("leftarrow")
+          .setAttribute("src", "images/arrow.png");
+      }, 200);
+      setInterval(() => {
+        document
+          .getElementById("leftarrow")
+          .setAttribute("src", "images/arrowleft.png");
+      }, 400);
+      setInterval(() => {
+        document
+          .getElementById("rightarrow")
+          .setAttribute("src", "images/arrow.png");
+      }, 200);
+      setInterval(() => {
+        document
+          .getElementById("rightarrow")
+          .setAttribute("src", "images/arrowright.png");
+      }, 400);
+    </script>
+  </body>
+</html>

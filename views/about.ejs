@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <title>MOHAMMAD MONIR PORTFOLIO</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&family=Old+Standard+TT&family=Poppins:wght@200;300;400;500;600;700&family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&family=Old+Standard+TT&family=Playfair+Display+SC:ital@1&family=Poppins:wght@200;300;400;500;600;700&family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="icon" type="png" href="/images/mmlogo.png" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&family=Montserrat+Alternates:ital@1&family=Old+Standard+TT&family=Playfair+Display+SC:ital@1&family=Poppins:wght@200;300;400;500;600;700&family=Roboto&family=Young+Serif&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      #about {
+        background-color: yellow;
+      }
+      .about {
+        background-color: rgb(247, 247, 125);
+      }
+      .work,
+      .connect,
+      .services,
+      .navlogo {
+        background-color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <%-include('navup')%>
+    <main class="mainwork" id="aboutmainwork">
+      <header id="header"><h1>WHO I AM</h1></header>
+      <div class="mainsubdiv" id="section2">
+        <div class="info" id="monirinfo">
+          <img src="images/monird.png" alt="" id="secimage" />
+          <div class="imgsection" id="imgsection">
+            <p>
+              Welcome ! i'm M Monir Shokohyan , a graphic designer and web
+              developer. i possess a diverse skill set in various design and
+              development tools. Whether it's After Effects, Illustrator,or 2D
+              animation, i can create visually stunning designs.i also excel in
+              logo design ,crafting unique and memorable logos .in terms of web
+              development , i have expertise in frontend ,backend and much more
+              including Responsive designs. I pride myself on delivering
+              high-quality work that exceeds expectations. Feel free to explore
+              my portfolio and contact me for any project or collaborations .
+              let's bring your ideas to life!
+            </p>
+          </div>
+          <div class="imgfoot">
+            <div class="imgfootl">
+              <h3>M Monir Shokohyan</h3>
+              <h3>Graphic designer/Web developer</h3>
+            </div>
+            <div class="plusminus">
+              <div id="plus">+</div>
+              <div id="minus">&minus;</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="info" id="graphicinfo">
+          <div class="graphic">
+            <span class="material-symbols-outlined"> home_app_logo </span
+            ><span class="inftext"> Logo Design</span>
+          </div>
+          <div class="graphic">
+            <span class="material-symbols-outlined"> draw </span
+            ><span class="inftext"> Vector Design</span>
+          </div>
+          <div class="graphic">
+            <span class="material-symbols-outlined"> 2d </span
+            ><span class="inftext"> 2D Animation</span>
+          </div>
+          <div class="graphic">
+            <span class="material-symbols-outlined"> play_circle </span
+            ><span class="inftext"> 2D Explainer video</span>
+          </div>
+          <div class="graphic">
+            <span class="material-symbols-outlined"> video_settings </span
+            ><span class="inftext"> video edit</span>
+          </div>
+          <div class="graphic">
+            <span class="material-symbols-outlined"> book_4 </span
+            ><span class="inftext"> brochure and book cover design</span>
+          </div>
+        </div>
+        <div class="infohr"></div>
+        <div class="info" id="websiteinfo">
+          <div class="website">
+            <span class="material-symbols-outlined"> stylus_note </span
+            ><span class="inftext"> Website Design</span>
+          </div>
+          <div class="website">
+            <span class="material-symbols-outlined"> door_front </span
+            ><span class="inftext"> Frontend</span>
+          </div>
+          <div class="website">
+            <span class="material-symbols-outlined"> door_back </span
+            ><span class="inftext"> Backend</span>
+          </div>
+          <div class="website">
+            <span class="material-symbols-outlined"> code </span
+            ><span class="inftext"> Website development</span>
+          </div>
+          <div class="website">
+            <span class="material-symbols-outlined"> database </span
+            ><span class="inftext"> Database</span>
+          </div>
+          <div class="website">
+            <span class="material-symbols-outlined"> engineering </span
+            ><span class="inftext"> Maintenance Work</span>
+          </div>
+        </div>
+        <div class="infohr"></div>
+      </div>
+    </main>
+    <%-include('nav')%>
+
+    <script>
+      let plus = document.getElementById("plus");
+      let minus = document.getElementById("minus");
+      let image = document.getElementById("secimage");
+      let imgsection = document.getElementById("imgsection");
+      if (window.innerWidth < 950) {
+        image.src = "images/monire.png";
+      }
+
+      plus.addEventListener("click", () => {
+        imgsection.style.cssText =
+          "clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);";
+        plus.style.cssText = "transform:rotate(0deg);";
+
+        setTimeout(() => {
+          plus.style.display = "none";
+
+          minus.style.cssText = "display:flex;";
+        }, 700);
+      });
+      minus.addEventListener("click", () => {
+        imgsection.style.cssText =
+          "clip-path: polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%);";
+        plus.style.cssText = "transform:rotate(360deg);";
+        plus.style.display = "flex";
+        minus.style.display = "none";
+      });
+      let flag = true;
+      image.addEventListener("click", () => {
+        imgsection.style.cssText =
+          "clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);";
+        plus.style.cssText = "transform:rotate(0deg);";
+
+        setTimeout(() => {
+          plus.style.display = "none";
+
+          minus.style.cssText = "display:flex;";
+        }, 700);
+      });
+      imgsection.addEventListener("click", () => {
+        imgsection.style.cssText =
+          "clip-path: polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%);";
+
+        plus.style.cssText = "transform:rotate(360deg);";
+
+        minus.style.display = "none";
+        plus.style.display = "flex";
+      });
+      window.addEventListener("DOMContentLoaded", () => {
+        document.getElementById("header").style.transform = "scaleX(100%)";
+        document.getElementById("section2").style.transform = "scaleY(100%)";
+      });
+    </script>
+  </body>
+</html>

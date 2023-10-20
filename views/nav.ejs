@@ -1,0 +1,19 @@
+<nav class="nav">
+  <a href="/services" class="services">SERVICES</a>
+  <a href="/connect" class="connect">CONNECT</a>
+  <a class="navlogo" id="navdiv" href="/home">
+    <img src="images/mmlogo.png" alt="logo" id="navimage" />
+  </a>
+  <a href="/work" class="work">WORK</a>
+  <a href="/about" class="about">ABOUT</a>
+</nav>
+<script>
+  document.getElementById("navdiv").addEventListener("mouseenter", () => {
+    document.getElementById("navimage").style.cssText =
+      "transform: rotate(360deg);";
+  });
+  document.getElementById("navdiv").addEventListener("mouseleave", () => {
+    document.getElementById("navimage").style.cssText =
+      "transform: rotate(-360deg);";
+  });
+</script>
